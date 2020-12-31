@@ -2,13 +2,26 @@
   "suggest.noselect": false,
   "prettier.tabWidth": 2,
   "prettier.useTabs": false,
+
+  "eslint.quiet": true,
+  "eslint.enable": true,
+  "eslint.options": {
+    "rules": {
+      "indent": "off",
+      "react/jsx-indent": "off",
+      "react/jsx-indent-props": "off"
+    }
+  },
+  "eslint.autoFixOnSave": false,
+
   "coc.preferences.formatOnSaveFiletypes": [
-    "javascript",
+    // "javascript",
     "typescript",
     "typescriptreact",
     "json",
-    "javascriptreact",
+    // "javascriptreact",
     "typescript.tsx",
     "graphql"
-  ]
+  ],
+  "coc.preferences.extensionUpdateCheck": "daily"
 }

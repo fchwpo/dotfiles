@@ -30,6 +30,7 @@ export PATH=$HOME/.config/rofi/bin:$PATH
 # Managing Dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias dt="dotfiles"
+alias vimconfig="vim ~/.config/nvim/init.vim"
 # Aliases Custom
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zshconfig="vim ~/.zshrc"

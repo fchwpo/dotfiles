@@ -2,33 +2,27 @@
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
-"Plug 'tsony-tsonev/nerdtree-git-plugin'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
-Plug 'scrooloose/nerdcommenter'
-"Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-
-Plug 'christoomey/vim-tmux-navigator'
-
-" Plug 'morhetz/gruvbox'
-Plug 'joshdick/onedark.vim'
-
-Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
-
-" Initialize plugin system
+Plug 'scrooloose/nerdcommenter' " Yeh na
+Plug 'christoomey/vim-tmux-navigator' " Tmux Navigator
+Plug 'joshdick/onedark.vim' " Onedark theme
+" Plug 'HerringtonDarkholme/yats.vim' " TS Syntax
+" My Added Plugins
+" Plug 'terryma/vim-multiple-cursors'
 call plug#end()
 
 inoremap jk <ESC>
-nmap <C-n> :NERDTreeToggle<CR>
+nmap <C-b> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
 " open NERDTree automatically
-"autocmd StdinReadPre * let s:std_in=1
-"autocmd VimEnter * NERDTree
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * NERDTree
 
 let g:NERDTreeGitStatusWithFlags = 1
 "let g:WebDevIconsUnicodeDecorateFolderNodes = 1
@@ -45,7 +39,7 @@ let g:NERDTreeGitStatusWithFlags = 1
     "\ }                         
 
 
-let g:NERDTreeIgnore = ['^node_modules$']
+let g:NERDTreeIgnore = ['^node_modules$', '^dist$', '^build$']
 
 " vim-prettier
 "let g:prettier#quickfix_enabled = 0
@@ -222,3 +216,6 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>i
+
+" Shubham Vishwakarma Changes
+
