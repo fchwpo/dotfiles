@@ -11,12 +11,7 @@
 # style_1     style_2     style_3     style_4     style_5     style_6
 # style_7     style_8     style_9     style_10    style_11    style_12
 
-# Themes I love to set
-# style_2 style_5 style_7 style_10
-# Good style_3 style_4
-
-
-theme="style_2"
+theme="style_1"
 dir="$HOME/.config/rofi/launchers/colorful"
 
 # dark
@@ -50,8 +45,7 @@ cat > $dir/colors.rasi <<- EOF
 EOF
 
 # comment these lines to disable random style
-# themes=($(ls -p --hide="launcher.sh" --hide="colors.rasi" $dir))
-# theme="${themes[$(( $RANDOM % 12 ))]}"
+themes=($(ls -p --hide="launcher.sh" --hide="colors.rasi" $dir))
+theme="${themes[$(( $RANDOM % 12 ))]}"
 
-# rofi -no-lazy-grab -show drun -modi drun -theme $dir/"$theme"
-rofi -combi-modi window,drun -no-lazy-grab -show combi -theme $dir/"$theme" -font "Fantasque Sans Mono Nerd Font 14"
+rofi -no-lazy-grab -show drun -modi drun -theme $dir/"$theme"

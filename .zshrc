@@ -23,6 +23,7 @@ source $ZSH/oh-my-zsh.sh
 # Go Setup
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$HOME/.config/rofi/bin:$PATH
+export PATH=$PATH:/home/vshubham/bin
 # Custom Configurations
 # export NVM_DIR="$HOME/.nvm"
 #[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -31,6 +32,7 @@ export PATH=$HOME/.config/rofi/bin:$PATH
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias dt="dotfiles"
 alias vimconfig="vim ~/.config/nvim/init.vim"
+alias xmonadconf="vim ~/.xmonad/xmonad.hs"
 # Aliases Custom
 alias ohmyzsh="vim ~/.oh-my-zsh"
 alias zshconfig="vim ~/.zshrc"
@@ -155,5 +157,9 @@ case ${TERM} in
     PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
     ;;
 esac
-
-
+# tmux aliases
+alias ta='tmux attach'
+alias tls='tmux ls'
+alias tat='tmux attach -t'
+alias tns='tmux new-session -s'
+alias tm="sh .tm"

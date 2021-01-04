@@ -10,7 +10,7 @@
 configuration {
 	font:							"Noto Sans Bold 10";
     show-icons:                     true;
-	icon-theme: 					"Papirus";
+	icon-theme: 					"Papirus Dark";
     display-drun: 					"";
     drun-display-format:            "{name}";
     disable-history:                false;
@@ -20,11 +20,11 @@ configuration {
 }
 
 * {
-    background:                     #00000000;
-    background-alt:              	#00000000;
+    background:                     #000000aa;
+    background-alt:              	  #00000000;
     background-bar:                 #f2f2f215;
     foreground:                     #f2f2f2EE;
-    accent:			            	#3DAEE966;
+    accent:			            	      #3DAEE966;
 }
 
 window {
@@ -33,8 +33,8 @@ window {
     text-color:                     @foreground;
 	border:							0px;
 	border-color:					@border;
-    border-radius:                  0px;
-	width:							40%;
+    border-radius:                  12px;
+	width:							35%;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;

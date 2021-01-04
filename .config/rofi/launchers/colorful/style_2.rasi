@@ -10,13 +10,12 @@
 configuration {
 	font:							"Iosevka Nerd Font 10";
     show-icons:                     true;
-	icon-theme: 					"Papirus - Dark";
-   display-drun: 					"";
-   display-window: "";
+	icon-theme: 					"Papirus";
+    display-drun: 					"";
     drun-display-format:            "{name}";
     disable-history:                false;
     fullscreen:                     false;
-    hide-scrollbar: 				true;
+	hide-scrollbar: 				true;
 	sidebar-mode: 					false;
 }
 
@@ -29,7 +28,7 @@ window {
 	border:							0px;
 	border-color:					@ac;
     border-radius:                  12px;
-	width:							25%;
+	width:							18%;
     location:                       center;
     x-offset:                       0;
     y-offset:                       0;
