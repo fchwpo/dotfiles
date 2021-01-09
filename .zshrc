@@ -4,8 +4,8 @@ export ZSH="/home/vshubham/.oh-my-zsh"
 export TERM="xterm-256color"              # getting proper colors
 export HISTORY_IGNORE="(ls|exa|cd|pwd|exit|neofetch|sudo reboot|history|cd -|cd ..|npmr build-client|npmr build-server|npmr start-server)"
 # alias vim="nvim"
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="nvim"
+export VISUAL="nvim"
 export ZSH_THEME="robbyrussell"
 export HIST_STAMPS="mm/dd/yyyy"
 export DISABLE_MAGIC_FUNCTIONS=true
@@ -33,11 +33,11 @@ export PATH=$PATH:/home/vshubham/bin
 # Managing Dotfiles
 alias dotfiles='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
 alias dt="dotfiles"
-alias vimconfig="vim ~/.config/nvim/init.vim"
-alias xmonadconf="vim ~/.xmonad/xmonad.hs"
+alias vimconfig="nvim ~/.config/nvim/init.vim"
+alias xmonadconf="nvim ~/.xmonad/xmonad.hs"
 # Aliases Custom
-alias ohmyzsh="vim ~/.oh-my-zsh"
-alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias zshconfig="nvim ~/.zshrc"
 alias zshreload="source ~/.zshrc"
 alias vpnstart="cd /home/vshubham/.open-vpn-work && make start-vpn"
 # Credentials SSH
@@ -70,7 +70,7 @@ alias dk="docker"
 # Use ll instead of ls
 alias ls="exa -l --color=auto"
 # Tmux aliases
-alias tconfig="vim ~/.config/tmux/tmux.conf"
+alias tconfig="nvim ~/.config/tmux/tmux.conf"
 # get top process eating memory
 alias psmem='ps auxf | sort -nr -k 4'
 alias psmem10='ps auxf | sort -nr -k 4 | head -10'
@@ -86,14 +86,6 @@ alias rm='rm -i'
 # Colorize grep output (good for log files)
 alias grep='grep --color=auto'
 alias cats='cat $1 | grep $2'
-# Task Warrior
-alias t="task"
-tcomp(){
-	task completed end:$1
-}
-tpend(){
-	task list entry:$1
-}
 # pacman and yay
 alias cleanup='sudo pacman -Rns $(pacman -Qtdq)'
 # navigation
@@ -104,7 +96,6 @@ alias .4='cd ../../../..'
 alias .5='cd ../../../../..'
 # Curl
 alias curlpost='curl -H "Content-Type: application/json" -d @-'
-
 ################# Custom Scripts and Key Bindings #################
 # Kill All Process Running on port specified
 killport(){
@@ -159,9 +150,5 @@ case ${TERM} in
     PROMPT_COMMAND='echo -ne "\033_${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\033\\"'
     ;;
 esac
-# tmux aliases
-alias ta='tmux attach'
-alias tls='tmux ls'
-alias tat='tmux attach -t'
-alias tns='tmux new-session -s'
-alias tm="sh .tm"
+
+

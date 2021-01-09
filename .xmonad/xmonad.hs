@@ -88,13 +88,8 @@ myModMask = mod4Mask       -- Sets modkey to super/windows key
 myTerminal :: String
 myTerminal = "alacritty"   -- Sets default terminal
 
--- myBrowser :: String
--- myBrowser = "qutebrowser "               -- Sets qutebrowser as browser for tree select
--- myBrowser = myTerminal ++ " -e lynx " -- Sets lynx as browser for tree select
-
 myEditor :: String
 myEditor = "nvim"  -- Sets emacs as editor for tree select
--- myEditor = myTerminal ++ " -e vim "    -- Sets vim as editor for tree select
 
 myBorderWidth :: Dimension
 myBorderWidth = 3          -- Sets border width for windows
