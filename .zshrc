@@ -3,7 +3,7 @@ export ZSH="/home/vshubham/.oh-my-zsh"
 # ZSH CONFIGURATIONS
 export TERM="xterm-256color"              # getting proper colors
 export HISTORY_IGNORE="(ls|exa|cd|pwd|exit|neofetch|sudo reboot|history|cd -|cd ..|npmr build-client|npmr build-server|npmr start-server)"
-alias vim="nvim"
+# alias vim="nvim"
 export EDITOR="vim"
 export VISUAL="vim"
 export ZSH_THEME="robbyrussell"
@@ -12,6 +12,8 @@ export DISABLE_MAGIC_FUNCTIONS=true
 export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 export COMPLETION_WAITING_DOTS=true
 export DISABLE_UNTRACKED_FILES_DIRTY=true
+# Android Studio Access Issue Xmonad
+export _JAVA_AWT_WM_NONREPARENTING=1
 # PLUGINS
 # TO LAZY LOAD NVM USING zsh-nvm
 export NVM_NO_USE=true

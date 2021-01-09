@@ -35,7 +35,7 @@ set updatetime=300                      " Faster completion
 set timeoutlen=100                      " By default timeoutlen is 1000 ms
 set clipboard=unnamedplus               " Copy paste between vim and everything else
 set incsearch
-set guifont=JetBrainsMono\ Nerd\ Font
+set guifont=Cascadia\ Code
 set title                               " Show title for terminal
 " New stuff
 " set notimeout nottimeout
@@ -53,5 +53,6 @@ set title                               " Show title for terminal
 " au! BufWritePost $MYVIMRC source %      " auto source when writing to init.vm alternatively you can run :source $MYVIMRC
 autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
+let g:ctrlp_custom_ignore = 'node_modules\|DS_Store\|git'
 " You can't stop me
 cmap w!! w !sudo tee %
