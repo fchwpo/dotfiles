@@ -208,7 +208,7 @@ mySpacing' i = spacingRaw True (Border i i i i) True (Border i i i i) True
 tall     = renamed [Replace "tall"]
            $ windowNavigation
            $ addTabs shrinkText myTabTheme
-           $ subLayout [] (smartBorders Simplest)
+           -- $ subLayout [] (smartBorders Simplest)
            $ limitWindows 12
            $ mySpacing 8
            $ ResizableTall 1 (3/100) (1/2) []
@@ -279,7 +279,7 @@ myTabTheme = def { fontName            = myFont
 -- Theme for showWName which prints current workspace when you change workspaces.
 myShowWNameTheme :: SWNConfig
 myShowWNameTheme = def
-    { swn_font              = "xft:Ubuntu:bold:size=60"
+    { swn_font              = "xft:Droid Sans:bold:size=60"
     , swn_fade              = 1.0
     , swn_bgcolor           = "#1c1f24"
     , swn_color             = "#ffffff"
@@ -299,6 +299,7 @@ myLayoutHook = avoidStruts $ mouseResize $ windowArrange $ T.toggleLayouts float
                                  ||| threeCol
                                  ||| threeRow
 
+
 myWorkspaces = ["dev", "www", "code", "play", "etc", "bin", "dot", "usr", "zsh"]
 -- myWorkspaces = [" 1 ", " 2 ", " 3 ", " 4 ", " 5 ", " 6 ", " 7 ", " 8 ", " 9 "]
 
@@ -314,11 +315,12 @@ myManageHook = composeAll
      , title =? "Oracle VM VirtualBox Manager"     --> doFloat
      , className =? "VirtualBox Manager" --> doShift  ( myWorkspaces !! 4 )
      , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
+     , (className =? "google-chrome-stable" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
      ] <+> namedScratchpadManageHook myScratchPads
 
 myLogHook :: X ()
 myLogHook = fadeInactiveLogHook fadeAmount
-    where fadeAmount = 0.95
+    where fadeAmount = 0.94
 
 myKeys :: String -> [([Char], X ())]
 myKeys home =
@@ -461,3 +463,5 @@ defaults = def {
                                <+> docksEventHook,
         startupHook        = myStartupHook
     }
+
+
