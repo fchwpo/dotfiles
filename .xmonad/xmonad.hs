@@ -314,6 +314,8 @@ myManageHook = composeAll
      , className =? "Gimp"    --> doFloat
      , title =? "Oracle VM VirtualBox Manager"     --> doFloat
      , className =? "VirtualBox Manager" --> doShift  ( myWorkspaces !! 4 )
+     , stringProperty "_NET_WM_NAME" =? "Emulator" --> doFloat
+     , (className =? "thunar" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
      , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
      , (className =? "google-chrome-stable" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
      ] <+> namedScratchpadManageHook myScratchPads

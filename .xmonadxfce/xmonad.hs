@@ -124,7 +124,7 @@ myStartupHook = do
         spawnOnce "dunst"
         spawn "xsetroot -cursor_name left_ptr"
         spawnOnce "greenclip daemon"
-        setWMName "Xmonad-Arch-Shubham"
+        setWMName "LG3D"
 
 
 myColorizer :: Window -> Bool -> X (String, String)
@@ -327,7 +327,8 @@ myKeys home =
     -- Xmonad
         [ ("M-q", spawn "xmonad --recompile;xmonad --restart")   -- Restarts xmonad
     -- Power Prompt
-        , ("M-S-q", spawn "sh ~/.config/rofi-powermenu/powermenu.sh")
+        , ("M-S-q", spawn "xfce4-session-logout") --XFCE4
+        -- , ("M-S-q", spawn "sh ~/.config/rofi-powermenu/powermenu.sh")
     -- Menus
         , ("M-o", spawn "sh ~/.config/rofi/launchers/misc/launcher.sh")
     -- Useful programs to have a keybinding for launch

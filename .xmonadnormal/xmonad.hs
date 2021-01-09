@@ -124,7 +124,8 @@ myStartupHook = do
         spawnOnce "dunst"
         spawn "xsetroot -cursor_name left_ptr"
         spawnOnce "greenclip daemon"
-        setWMName "Xmonad-Arch-Shubham"
+        spawnOnce "xfce4-power-manager &"
+        setWMName "LG3D"
 
 
 myColorizer :: Window -> Bool -> X (String, String)
@@ -312,6 +313,7 @@ myManageHook = composeAll
      , className =? "mpv"     --> doShift ( myWorkspaces !! 7 )
      , className =? "Gimp"    --> doShift ( myWorkspaces !! 8 )
      , className =? "Gimp"    --> doFloat
+     , stringProperty "_NET_WM_NAME" =? "Emulator" --> doFloat
      , title =? "Oracle VM VirtualBox Manager"     --> doFloat
      , className =? "VirtualBox Manager" --> doShift  ( myWorkspaces !! 4 )
      , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
