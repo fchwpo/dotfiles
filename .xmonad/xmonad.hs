@@ -124,6 +124,7 @@ myStartupHook = do
         spawnOnce "dunst"
         spawn "xsetroot -cursor_name left_ptr"
         spawnOnce "greenclip daemon"
+        spawnOnce "xfce4-power-manager &"
         setWMName "Xmonad-Arch-Shubham"
 
 
