@@ -118,7 +118,7 @@ font:
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
-    family: SauceCodePro Nerd Font
+    family: FantasqueSansMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Regular
@@ -137,7 +137,7 @@ font:
     # family: UbuntuMono Nerd Font
     # family: Monofur Nerd Font
     # family: TerminessTTF Nerd Font
-    family: SauceCodePro Nerd Font
+    family: FantasqueSansMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold
@@ -156,7 +156,7 @@ font:
     # family: UbuntuMono Nerd Font
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
-    family: SauceCodePro Nerd Font
+    family: FantasqueSansMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Italic
@@ -175,13 +175,13 @@ font:
     # family: UbuntuMono Nerd Font
     # family: Monofuritalic Nerd Font Mono
     # family: TerminessTTF Nerd Font
-    family: SauceCodePro Nerd Font
+    family: FantasqueSansMono Nerd Font
 
     # The `style` can be specified to pick a specific face.
     style: Bold Italic
 
   # Point size
-  size: 10.25
+  size: 11.00
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
