@@ -152,7 +152,7 @@ randompasswd(){
 }
 ### CHANGE TITLE OF TERMINALS
 case ${TERM} in
-  xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|alacritty|st|konsole*)
+  xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|kitty|alacritty|st|konsole*)
     PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/\~}\007"'
         ;;
   screen*)
@@ -165,4 +165,6 @@ esac
 
 # Script Aliases
 alias weather="sh ~/.scripts/showWeather.sh"
+
+# PowerLevel10k config
 

@@ -1004,7 +1004,7 @@
   "python.formatting.provider": "black",
   "python.insidersChannel": "off",
   "terminal.integrated.shell.linux": "/bin/zsh",
-  "terminal.external.linuxExec": "/usr/bin/alacritty",
+  "terminal.external.linuxExec": "/usr/bin/kitty",
   "code-runner.executorMap": {
     "python": "$pythonPath $fileName",
     "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",

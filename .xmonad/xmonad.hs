@@ -80,13 +80,14 @@ import XMonad.Util.Run (runProcessWithInput, safeSpawn, spawnPipe)
 import XMonad.Util.SpawnOnce
 
 myFont :: String
-myFont = "xft:SauceCodePro Nerd Font Mono:regular:size=9:antialias=true:hinting=true"
+myFont = "xft:FantasqueSansMono Nerd Font Mono:regular:size=13:antialias=true:hinting=true"
 
 myModMask :: KeyMask
 myModMask = mod4Mask       -- Sets modkey to super/windows key
 
 myTerminal :: String
-myTerminal = "alacritty"   -- Sets default terminal
+-- myTerminal = "alacritty"   -- Sets default terminal
+myTerminal = "kitty"
 
 myEditor :: String
 myEditor = "nvim"  -- Sets emacs as editor for tree select
@@ -125,7 +126,9 @@ myStartupHook = do
         spawn "xsetroot -cursor_name left_ptr"
         spawnOnce "greenclip daemon"
         spawnOnce "xfce4-power-manager &"
-        setWMName "Xmonad-Arch-Shubham"
+        spawnOnce "volctl &"
+        -- setWMName "Xmonad-Arch-Shubham"
+        setWMName "LG3D"
 
 
 myColorizer :: Window -> Bool -> X (String, String)
@@ -280,7 +283,7 @@ myTabTheme = def { fontName            = myFont
 -- Theme for showWName which prints current workspace when you change workspaces.
 myShowWNameTheme :: SWNConfig
 myShowWNameTheme = def
-    { swn_font              = "xft:Droid Sans:bold:size=60"
+    { swn_font              = "xft:FantasqueSansMono Nerd Font:bold:size=60"
     , swn_fade              = 1.0
     , swn_bgcolor           = "#1c1f24"
     , swn_color             = "#ffffff"
