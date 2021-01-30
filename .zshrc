@@ -15,7 +15,7 @@ source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 # alias vim="nvim"
 export EDITOR="nvim"
 export VISUAL="nvim"
-export ZSH_THEME="robbyrussell"
+# export ZSH_THEME="robbyrussell"
 export HIST_STAMPS="mm/dd/yyyy"
 export DISABLE_MAGIC_FUNCTIONS=true
 export ZSH_AUTOSUGGEST_MANUAL_REBIND=1
